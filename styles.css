@@ -1,4 +1,3 @@
-
 body,
 html {
   box-sizing: border-box;
@@ -284,6 +283,14 @@ hr {
 
 .fade-in {
   animation: fadein ease-in-out 2s;
+}
+
+.column-layout {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  text-align: center;
 }
 
 @keyframes fadein {
