@@ -18,6 +18,15 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '511397782960599');
       fbq('track', 'PageView');
+
+      let signupTracked = false;
+      document.addEventListener('ckjs:submission:complete', (event) => {
+        if (event.detail?.uid !== '1d265f710d' || signupTracked) return;
+        if (typeof fbq !== 'function') return;
+
+        signupTracked = true;
+        fbq('track', 'Lead');
+      });
     </script>
     <noscript>
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=511397782960599&ev=PageView&noscript=1" alt="" />
