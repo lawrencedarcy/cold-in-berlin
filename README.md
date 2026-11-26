@@ -1,7 +1,7 @@
 # cold-in-berlin
 Code for the Cold in Berlin website
 
-The homepage includes the album shop and Songkick live dates, with in-page
+The homepage includes the album shop, Watch gallery and Songkick live dates, with in-page
 navigation. The standalone shop and live pages remain available.
 Both album sections include The Body Is The Wound E.P. The full shop also
 features the Wounds T-shirt, Wounds Patch, Arms Control T-shirt and Wounds Tote
@@ -25,6 +25,12 @@ cannot create an empty panel beneath the controls.
 The hero uses a muted, looping YouTube background with a pause control. It keeps
 the static band photo until playback starts, or when playback is unavailable.
 Reduced-motion visitors get the static photo without loading the video.
+
+The Watch section contains six official videos with a large featured player,
+previous/next controls and thumbnail selection. Videos load into a single
+privacy-enhanced YouTube player only after clicking Play; changing the selection
+stops the previous video. YouTube links remain available if playback or
+JavaScript is unavailable. The gallery does not advance automatically.
 
 Preview over HTTP (for example, `python3 -m http.server 8000`) rather than opening
 the HTML file directly: YouTube requires an HTTP referrer for embedded playback.
