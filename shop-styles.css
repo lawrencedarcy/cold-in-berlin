@@ -45,6 +45,28 @@
   min-width: 0;
 }
 
+.shop-media {
+  width: 280px;
+  max-width: 100%;
+  justify-self: center;
+}
+
+.shop-media a,
+.shop-media img {
+  display: block;
+}
+
+.shop-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.shop-media iframe {
+  height: 42px;
+  margin-top: 0.5rem;
+}
+
 .shop-content {
   padding: 0.75rem 0;
   color: var(--muted);
@@ -82,7 +104,8 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 280px);
 }
 
-.shop-container.reverse iframe {
+.shop-container.reverse > iframe,
+.shop-container.reverse .shop-media {
   grid-column: 2;
   grid-row: 1;
 }
@@ -90,6 +113,29 @@
 .shop-container.reverse .shop-content-wrapper {
   grid-column: 1;
   grid-row: 1;
+}
+
+.homepage-shop-grid {
+  display: grid;
+  width: min(100%, var(--content-width));
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.5rem;
+}
+
+.homepage-shop .shop-container {
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  text-align: center;
+}
+
+.homepage-shop .shop-content-header {
+  margin: 0;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 700px) {
@@ -105,7 +151,8 @@
     gap: 1.25rem;
   }
 
-  .shop-container.reverse iframe,
+  .shop-container.reverse > iframe,
+  .shop-container.reverse .shop-media,
   .shop-container.reverse .shop-content-wrapper {
     grid-column: 1;
     grid-row: auto;

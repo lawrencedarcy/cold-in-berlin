@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COLD IN BERLIN</title>
+    <link rel="icon" type="image/jpeg" href="/assets/wounds-cover.jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shop-styles.css" />
+    <script src="hero-video.js" defer></script>
+    <script src="homepage-nav.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,14 +21,13 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="homepage">
     <div class="nav-wrapper">
       <div class="nav-items fade-in">
         <ul class="nav-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/live.html">Live</a></li>
-          <li><a href="/shop.html">Shop</a></li>
-          <li><a href="/press.html">Press</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#live">Live</a></li>
+          <li><a href="#shop">Shop</a></li>
         </ul>
 
         <span class="title-text" >COLD IN BERLIN</span>
@@ -49,7 +52,10 @@
     </div>
 
     <div class="content-wrapper">
-      <div class="top-body">
+      <section class="top-body video-hero" id="home" aria-labelledby="album-title">
+        <div class="hero-video" aria-hidden="true">
+          <div id="hero-video-player"></div>
+        </div>
         <div class="header-text fade-in">
           <a
             class="hero-album-art"
@@ -65,7 +71,7 @@
           </a>
           <div class="hero-copy">
             <p class="hero-kicker">NEW HEAVY SOUNDS <span>/</span> 2025</p>
-            <h1 class="header-text-title">WOUNDS</h1>
+            <h1 class="header-text-title" id="album-title">WOUNDS</h1>
             <p class="hero-description">
               Cold in Berlin's long-awaited fifth album. Heavy, haunting,
               and out now.
@@ -76,27 +82,124 @@
               >
               <a
                 class="button button-outline"
-                href="https://www.youtube.com/watch?v=ORoW_2tiGkk"
-                >Watch the video</a
+                href="https://coldinberlin.bandcamp.com/album/wounds"
+                >Buy now</a
               >
             </div>
           </div>
         </div>
-      </div>
-      <div class="middle-body">
-        <div class="video">
-          <span>SOUND AND COLOUR</span>
-          <div class="video-container">
+        <button class="hero-video-toggle" type="button" hidden>
+          Pause background video
+        </button>
+      </section>
+      <section class="homepage-section homepage-shop" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Records &amp; merchandise</p>
+            <h2 class="header-secondary-page" id="shop-title">SHOP</h2>
+          </div>
+          <a class="button button-outline" href="/shop.html">Explore the full shop</a>
+        </div>
+        <p class="shop-header-text">
+          Vinyl, CDs and digital releases, direct from
+          <a href="https://coldinberlin.bandcamp.com/">our Bandcamp store</a>.
+        </p>
+        <div class="homepage-shop-grid">
+          <article class="shop-container">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/XGjr_OFNZZU"
-              title="Cold in Berlin - Sound and Colour"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              title="Wounds by Cold in Berlin"
+              src="https://bandcamp.com/EmbeddedPlayer/album=1778161646/size=large/bgcol=111111/linkcol=a71e26/minimal=true/transparent=true/"
+              loading="lazy"
+            ><a href="https://coldinberlin.bandcamp.com/album/wounds">Wounds by Cold in Berlin</a></iframe>
+            <div class="shop-content-wrapper">
+              <h3 class="shop-content shop-content-header">WOUNDS</h3>
+              <div class="shop-content"><a href="https://coldinberlin.bandcamp.com/album/wounds">Buy on Bandcamp</a></div>
+            </div>
+          </article>
+          <article class="shop-container">
+            <iframe
+              title="Rituals of Surrender by Cold in Berlin"
+              src="https://bandcamp.com/EmbeddedPlayer/album=3021181074/size=large/bgcol=111111/linkcol=a71e26/minimal=true/transparent=true/"
+              loading="lazy"
+            ><a href="https://coldinberlin.bandcamp.com/album/rituals-of-surrender">Rituals of Surrender by Cold in Berlin</a></iframe>
+            <div class="shop-content-wrapper">
+              <h3 class="shop-content shop-content-header">RITUALS OF SURRENDER</h3>
+              <div class="shop-content"><a href="https://coldinberlin.bandcamp.com/album/rituals-of-surrender">Buy on Bandcamp</a></div>
+            </div>
+          </article>
+          <article class="shop-container">
+            <div class="shop-media">
+              <a href="https://coldinberlin.bandcamp.com/album/the-comfort-of-loss-dust">
+                <img
+                  src="assets/comfort-of-loss-and-dust-cover.jpg"
+                  alt="The Comfort of Loss and Dust album cover"
+                  width="280"
+                  height="280"
+                  loading="lazy"
+                />
+              </a>
+              <iframe
+                title="Listen to The Comfort of Loss and Dust by Cold in Berlin"
+                src="https://bandcamp.com/EmbeddedPlayer/album=2343242495/size=small/bgcol=111111/linkcol=a71e26/artwork=none/transparent=true/"
+                loading="lazy"
+              ><a href="https://coldinberlin.bandcamp.com/album/the-comfort-of-loss-dust">The Comfort of Loss and Dust by Cold in Berlin</a></iframe>
+            </div>
+            <div class="shop-content-wrapper">
+              <h3 class="shop-content shop-content-header">THE COMFORT OF LOSS AND DUST</h3>
+              <div class="shop-content"><a href="https://coldinberlin.bandcamp.com/album/the-comfort-of-loss-dust">Buy on Bandcamp</a></div>
+            </div>
+          </article>
+          <article class="shop-container">
+            <iframe
+              title="And Yet by Cold in Berlin"
+              src="https://bandcamp.com/EmbeddedPlayer/album=1603008627/size=large/bgcol=111111/linkcol=a71e26/minimal=true/transparent=true/"
+              loading="lazy"
+            ><a href="https://coldinberlin.bandcamp.com/album/and-yet">And Yet by Cold in Berlin</a></iframe>
+            <div class="shop-content-wrapper">
+              <h3 class="shop-content shop-content-header">AND YET</h3>
+              <div class="shop-content"><a href="https://coldinberlin.bandcamp.com/album/and-yet">Buy on Bandcamp</a></div>
+            </div>
+          </article>
+          <article class="shop-container">
+            <iframe
+              title="Give Me Walls by Cold in Berlin"
+              src="https://bandcamp.com/EmbeddedPlayer/album=771613048/size=large/bgcol=111111/linkcol=a71e26/minimal=true/transparent=true/"
+              loading="lazy"
+            ><a href="https://coldinberlin.bandcamp.com/album/give-me-walls">Give Me Walls by Cold in Berlin</a></iframe>
+            <div class="shop-content-wrapper">
+              <h3 class="shop-content shop-content-header">GIVE ME WALLS</h3>
+              <div class="shop-content"><a href="https://coldinberlin.bandcamp.com/album/give-me-walls">Buy on Bandcamp</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="homepage-section homepage-live" id="live" aria-labelledby="live-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">On stage</p>
+            <h2 class="header-secondary-page" id="live-title">LIVE DATES</h2>
+          </div>
+          <a class="button button-outline" href="https://www.songkick.com/artists/2944366">Follow on Songkick</a>
+        </div>
+        <div class="column-layout">
+          <div>
+            <a
+              href="https://www.songkick.com/artists/2944366"
+              class="songkick-widget"
+              data-theme="dark"
+              data-track-button="on"
+              data-detect-style="false"
+              data-font-color="#f1f0eb"
+              data-background-color="#070707"
+              data-button-text-color="#ffffff"
+              data-button-bg-color="#a71e26"
+              data-locale="en"
+            >Cold in Berlin tour dates</a>
+            <script src="https://widget.songkick.com/2944366/widget.js"></script>
           </div>
         </div>
-      </div>
-      <div class="bunker">
+      </section>
+      <div class="bunker" id="quotes" aria-label="Press quotes">
         <hr />
         <div class="bunker-text">
           <span
