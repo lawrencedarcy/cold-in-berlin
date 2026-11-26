@@ -67,6 +67,11 @@
   margin-top: 0.5rem;
 }
 
+.shop-merch .shop-media img {
+  height: 280px;
+  object-fit: contain;
+}
+
 .shop-content {
   padding: 0.75rem 0;
   color: var(--muted);
